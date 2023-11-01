@@ -31,16 +31,15 @@ public class Main {
                 System.out.print("Escolha uma opção: ");
 
                 opcao = scanner.nextInt();
-                scanner.nextLine(); // Limpa a quebra de linha
+                scanner.nextLine();
 
                 switch (opcao) {
                     case 1:
-                        // Incluir
                         System.out.println("Escolha o tipo:");
                         System.out.println("1. Pessoa Física");
                         System.out.println("2. Pessoa Jurídica");
                         int tipoIncluir = scanner.nextInt();
-                        scanner.nextLine(); // Limpa a quebra de linha
+                        scanner.nextLine();
 
                         if (tipoIncluir == 1) {
                             PessoaFisica novaPessoaFisica = lerPessoaFisicaDoUsuario(scanner);
@@ -55,16 +54,16 @@ public class Main {
                         }
                         break;
                     case 2:
-                        // Alterar
+
                         System.out.println("Escolha o tipo:");
                         System.out.println("1. Pessoa Física");
                         System.out.println("2. Pessoa Jurídica");
                         int tipoAlterar = scanner.nextInt();
-                        scanner.nextLine(); // Limpa a quebra de linha
+                        scanner.nextLine();
 
                         System.out.print("Digite o ID da pessoa a ser alterada: ");
                         int idPessoaParaAlterar = scanner.nextInt();
-                        scanner.nextLine(); // Limpa a quebra de linha
+                        scanner.nextLine();
 
                         if (tipoAlterar == 1) {
                             PessoaFisica pessoaFisicaParaAlterar = pessoaFisicaDAO.getPessoa(idPessoaParaAlterar);
@@ -89,16 +88,15 @@ public class Main {
                         }
                         break;
                     case 3:
-                        // Excluir
                         System.out.println("Escolha o tipo:");
                         System.out.println("1. Pessoa Física");
                         System.out.println("2. Pessoa Jurídica");
                         int tipoExcluir = scanner.nextInt();
-                        scanner.nextLine(); // Limpa a quebra de linha
+                        scanner.nextLine();
 
                         System.out.print("Digite o ID da pessoa a ser excluída: ");
                         int idPessoaParaExcluir = scanner.nextInt();
-                        scanner.nextLine(); // Limpa a quebra de linha
+                        scanner.nextLine();
 
                         if (tipoExcluir == 1) {
                             pessoaFisicaDAO.exclui(idPessoaParaExcluir);
@@ -111,16 +109,15 @@ public class Main {
                         }
                         break;
                     case 4:
-                        // Obter por ID
                         System.out.println("Escolha o tipo:");
                         System.out.println("1. Pessoa Física");
                         System.out.println("2. Pessoa Jurídica");
                         int tipoObter = scanner.nextInt();
-                        scanner.nextLine(); // Limpa a quebra de linha
+                        scanner.nextLine();
 
                         System.out.print("Digite o ID da pessoa a ser obtida: ");
                         int idPessoaParaObter = scanner.nextInt();
-                        scanner.nextLine(); // Limpa a quebra de linha
+                        scanner.nextLine();
 
                         if (tipoObter == 1) {
                             PessoaFisica pessoaFisicaObtida = pessoaFisicaDAO.getPessoa(idPessoaParaObter);
@@ -141,12 +138,11 @@ public class Main {
                         }
                         break;
                     case 5:
-                        // Obter todos
                         System.out.println("Escolha o tipo:");
                         System.out.println("1. Pessoa Física");
                         System.out.println("2. Pessoa Jurídica");
                         int tipoObterTodos = scanner.nextInt();
-                        scanner.nextLine(); // Limpa a quebra de linha
+                        scanner.nextLine();
 
                         if (tipoObterTodos == 1) {
                             List<PessoaFisica> todasPessoasFisicas = pessoaFisicaDAO.getPessoas();
